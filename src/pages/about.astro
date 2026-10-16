@@ -10,6 +10,7 @@ import Base from '../layouts/Base.astro';
           <h1 class="page-title">Hi, I'm Tejitha. <em>I like problems</em> <span class="hand">that show up messy.</span></h1>
           <div class="story">
             <p>Most of my work starts with unclear requirements, competing priorities and people who don't agree on what's actually wrong. My job is to find the shape underneath, before I touch a screen.</p>
+            <p>Fun fact: I started out as a <strong>developer</strong>, then wandered off into art and illustration. Tech pulled me back, though. I got curious about how we actually engage with our devices, and what makes an experience feel good or frustrating. That curiosity is what turned me into a UX designer.</p>
             <p>I'm not precious about early ideas. If a real user, a live event or better info proves me wrong, I'd rather redesign than defend something that isn't working. <strong>Being right on day one matters less than being right by the time it ships.</strong></p>
             <p>I don't think good design needs to show off. I'd rather build the kind of interface people stop noticing because it just works.</p>
             <p>And I move slower on the parts everyone skips: the edge case, the "what if this fails" screen, the moment something breaks live and someone has to use the product under pressure. <strong>That's usually where the real design problem was hiding all along.</strong></p>
@@ -63,7 +64,7 @@ import Base from '../layouts/Base.astro';
 
   <div class="ribbon" aria-hidden="true">
     <div class="track" id="ribbon">
-      {[0, 1, 2].map(() => ['writing', 'AI tinkering', 'sustainability', 'sketchbooks', 'side projects', 'good questions'].map((w) => <><span>{w}</span><i>✿</i></>))}
+      {[0, 1, 2].map(() => ['yoga', 'watercolors', 'digital sketching', 'handmade crafts', 'writing', 'AI tinkering', 'sustainability'].map((w) => <><span>{w}</span><i>✿</i></>))}
     </div>
   </div>
 
@@ -77,26 +78,31 @@ import Base from '../layouts/Base.astro';
         <span class="hand">the fun stuff ✿</span>
       </div>
       <div class="offclock">
-        <a class="sn" style="--c: var(--note-1); --r: -2deg" href="https://medium.com/@tejithakristem" target="_blank" rel="noopener">
+        <a class="sn" style="--c: var(--note-3); --r: -2deg" href="https://dribbble.com/tejitha" target="_blank" rel="noopener">
+          <span class="pin"></span>
+          <span class="emoji" aria-hidden="true">🎨</span>
+          <h3>I paint & sketch</h3>
+          <p>Watercolors on paper and digital sketches on screen. The artsy side of me never really left.</p>
+          <span class="where"><span class="mono">See my Dribbble</span><span class="arr">↗</span></span>
+        </a>
+        <div class="sn" style="--c: var(--note-1); --r: 1.6deg">
+          <span class="pin"></span>
+          <span class="emoji" aria-hidden="true">🧶</span>
+          <h3>I make things by hand</h3>
+          <p>Handmade crafts and art, because some ideas deserve real glue, paper and paint.</p>
+        </div>
+        <div class="sn" style="--c: var(--note-2); --r: -1.2deg">
+          <span class="pin"></span>
+          <span class="emoji" aria-hidden="true">🧘‍♀️</span>
+          <h3>I do yoga</h3>
+          <p>My reset button. A calm mind designs calmer products.</p>
+        </div>
+        <a class="sn" style="--c: var(--note-4); --r: 2deg" href="https://medium.com/@tejithakristem" target="_blank" rel="noopener">
           <span class="pin"></span>
           <span class="emoji" aria-hidden="true">✍️</span>
           <h3>I write</h3>
-          <p>About how I actually think through the work. Two of my pieces got picked up by UX World and Muzli.</p>
+          <p>About how I think through the work. Two pieces got picked up by UX World and Muzli.</p>
           <span class="where"><span class="mono">Read on Medium</span><span class="arr">↗</span></span>
-        </a>
-        <a class="sn" style="--c: var(--note-2); --r: 1.6deg" href="/projects/dear-wallet">
-          <span class="pin"></span>
-          <span class="emoji" aria-hidden="true">🛠️</span>
-          <h3>I build with AI</h3>
-          <p>I tinker with AI-assisted tools to take my own ideas end to end, from paper sketch to live URL.</p>
-          <span class="where"><span class="mono">See Dear Wallet</span><span class="arr">→</span></span>
-        </a>
-        <a class="sn" style="--c: var(--note-3); --r: -1.2deg" href="/projects/food-rescue">
-          <span class="pin"></span>
-          <span class="emoji" aria-hidden="true">🌱</span>
-          <h3>I think green</h3>
-          <p>A lot about how sustainability can be designed in, instead of lectured about.</p>
-          <span class="where"><span class="mono">See Food Rescue</span><span class="arr">→</span></span>
         </a>
       </div>
     </div>
