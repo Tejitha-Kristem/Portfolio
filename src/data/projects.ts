@@ -45,7 +45,7 @@ export const projects: Project[] = [
     name: 'Log',
     accent: 'Rite',
     type: 'Website design · Framer',
-    status: 'Live client site',
+    status: 'Live · in-house product',
     live: true,
     line: "AI governance for AI tools, aka the rulebook your AI agents can't ghost.",
     thumb: '/images/thumb-logrite.webp',
