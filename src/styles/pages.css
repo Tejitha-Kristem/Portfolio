@@ -124,6 +124,13 @@
 .video-slot span { color: var(--ink-soft); font-size: .88rem; }
 @keyframes breathe { 50% { transform: scale(1.08); } }
 
+.role.stack { grid-template-columns: 1fr; }
+.role-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 18px 40px; align-items: start; }
+.role-head dl { margin: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 24px; }
+@media (max-width: 760px) { .role-head, .role-head dl { grid-template-columns: 1fr; } }
+.vid { margin: 0; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); background: var(--paper-2); }
+.vid video { display: block; width: 100%; height: auto; }
+
 /* moments */
 .moment { margin-top: 46px; padding-top: 28px; border-top: 1.5px dashed var(--line); }
 .moment .tagrow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
@@ -257,3 +264,7 @@
   .js.motion .reveal .w, .js.motion .rise { opacity: 1 !important; transform: none !important; }
   a { text-decoration: none; }
 }
+
+/* real photo inside the polaroid sticker */
+.sticker .photo { position: relative; }
+.sticker .photo img { position: absolute; inset: 6%; width: 88%; height: 88%; object-fit: contain; }

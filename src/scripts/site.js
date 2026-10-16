@@ -148,3 +148,13 @@ document.querySelectorAll('.compare').forEach((c) => {
   input.addEventListener('input', set);
   set();
 });
+
+/* walkthrough videos: play muted while on screen, pause when away */
+const vids = document.querySelectorAll('video[data-autoplay]');
+if (vids.length && motionOK && 'IntersectionObserver' in window) {
+  const vo = new IntersectionObserver((entries) => entries.forEach((e) => {
+    const v = e.target;
+    if (e.isIntersecting) { v.play().catch(() => {}); } else v.pause();
+  }), { threshold: 0.5 });
+  vids.forEach((v) => vo.observe(v));
+}
