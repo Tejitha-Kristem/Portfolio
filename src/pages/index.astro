@@ -1,0 +1,234 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Tejitha Kristem · UI/UX Designer" description="Tejitha Kristem is a UI/UX designer in Bangalore who designs for real life, and sometimes builds it too.">
+  <div class="hero">
+    <div class="wrap">
+      <svg class="doodle d2" viewBox="0 0 46 46" aria-hidden="true"><path d="M6 40C6 18 18 6 40 6c0 22-12 34-34 34Z M6 40 26 20"/></svg>
+      <div class="hero-grid">
+        <div>
+          <span class="status"><svg class="pin-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><b>Bangalore</b></span>
+          <h1 class="thesis">
+            <span class="row">I design for</span>
+            <span class="row"><span class="struck">the perfect plan<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M1 6 C 20 2, 40 9, 60 4 S 90 6, 99 3"/></svg></span></span>
+            <span class="row"><span class="correction"><svg class="caret" viewBox="0 0 20 18" aria-hidden="true"><path pathLength="1" d="M2 16 10 3 18 16"/></svg><span class="hand">real life.</span></span></span>
+          </h1>
+          <p class="like">Like <span class="swap" id="swap" aria-live="polite">
+            <span class="on"><span class="hl">the gate rush on a garba night.</span></span>
+            <span><span class="hl">the 11 PM guilty food scroll.</span></span>
+            <span><span class="hl">the end-of-month money check.</span></span>
+            <span><span class="hl">an AI agent going off-script.</span></span>
+          </span></p>
+          <p class="intro">Hey, I'm Tejitha 👋 UI/UX designer by day, <strong>builder by curiosity</strong>. I believe good design should feel effortless and <strong>waste nothing</strong>: not time, not clicks. Give me a messy problem and I'll find the shape underneath, then lowkey ship it myself.</p>
+          <div class="ctas">
+            <a class="btn" href="#hero-project">See my hero project <span class="arr">↓</span></a>
+            <a class="btn ghost" href="/resume">Grab my resume</a>
+          </div>
+        </div>
+        <div class="sticker-col">
+          <div class="sticker">
+            <span class="tape"></span>
+            <div class="photo" role="img" aria-label="Photo placeholder"><span>TK</span></div>
+            <div class="cap">that's me!</div>
+          </div>
+          <div class="sticker-note hand"><svg viewBox="0 0 40 34" aria-hidden="true"><path d="M36 30C32 14 20 8 6 8M13 2 6 8l7 6"/></svg> designs it, <br>then builds it</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ribbon" aria-hidden="true">
+    <div class="track" id="ribbon"><span>research</span><i>✿</i><span>structure</span><i>✿</i><span>design</span><i>✿</i><span>ownership</span><i>✿</i><span>adaptability</span><i>✿</i><span>review</span><i>✿</i><span>beyond the interface</span><i>✿</i><span>iterate</span><i>✿</i><span>less, but right</span><i>✿</i><span>research</span><i>✿</i><span>structure</span><i>✿</i><span>design</span><i>✿</i><span>ownership</span><i>✿</i><span>adaptability</span><i>✿</i><span>review</span><i>✿</i><span>beyond the interface</span><i>✿</i><span>iterate</span><i>✿</i><span>less, but right</span><i>✿</i><span>research</span><i>✿</i><span>structure</span><i>✿</i><span>design</span><i>✿</i><span>ownership</span><i>✿</i><span>adaptability</span><i>✿</i><span>review</span><i>✿</i><span>beyond the interface</span><i>✿</i><span>iterate</span><i>✿</i><span>less, but right</span><i>✿</i></div>
+  </div>
+
+  <section id="hero-project">
+    <div class="wrap">
+      <div class="spot">
+        <div class="rise">
+          <span class="eyebrow mono">Hero project · Live event ticketing</span>
+          <h3>Event<span class="gem">Gem</span></h3>
+          <p class="hook">Every Indian celebration abroad, <span class="hl">under one roof.</span></p>
+          <p class="body">The festive-season bestie for Indians overseas. It's live, up and running, and hosting garba nights, Diwali celebrations and concerts for happy crowds far from home. I designed across web, mobile and the door-scanner app with the team, from first brief to launch.</p>
+          <ul class="chips">
+            <li class="live">● Live product</li>
+            <li>Web + mobile + scanner</li>
+            <li>3 user roles</li>
+            <li>Brief → launch</li>
+          </ul>
+          <div class="ctas"><a class="btn" href="/projects/eventgem">Read the case study <span class="arr">→</span></a></div>
+        </div>
+        <div class="stage rise">
+          <div class="shot" data-tilt><img src="/images/thumb-eventgem.webp" alt="EventGem organizer dashboard, event discovery and live scan data screens on three phones" width="872" height="596"></div>
+          <div class="scanner" id="scanner" aria-hidden="true">
+            <div class="bar"><span>Garba Night</span><span>Scanner</span></div>
+            <div class="qrbox"><div class="qr" id="qr"></div><div class="scanline"></div></div>
+            <div class="verdict"><div class="v1" id="v1">Scanning…</div><div class="v2" id="v2">hold steady</div></div>
+            <div class="count">checked in <b id="cnt">79</b> / 150</div>
+          </div>
+          <p class="stage-note hand">scan, ✓, next person. <br>that's the whole job, so that's the whole screen</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" style="padding-top: 40px">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow mono">More work</span>
+          <h2 class="reveal">More work, <em>made with the same care</em></h2>
+        </div>
+        <span class="hand">scroll, they stack ↓</span>
+      </div>
+      <div class="stack">
+        <a class="card t-food" style="--n:0" href="/projects/food-rescue">
+          <div>
+            <span class="type mono">Concept · Solo · Swiggy feature</span>
+            <h3>Food Rescue</h3>
+            <p>Late-night cravings, but make it sustainable. A 9–11 PM Swiggy tab where fresh, unsold meals find a hungry home at up to 70% off.</p>
+            <span class="go">See the concept <span class="arr">→</span></span><br>
+            <span class="note hand">saves meals, money & CO₂ 🌱</span>
+          </div>
+          <div class="thumb" data-tilt><img src="/images/thumb-foodrescue.webp" alt="Food Rescue tab inside the Swiggy app with freshness badges and impact metrics" width="872" height="595" loading="lazy"></div>
+        </a>
+        <a class="card t-wallet" style="--n:1" href="/projects/dear-wallet">
+          <div>
+            <span class="type mono">Design + build · Self-initiated · Live</span>
+            <h3>Dear Wallet</h3>
+            <p>Started as 3 paper sketches, now it's a live app my household actually uses every month. Designed it, built it with Claude Code, shipped it on Vercel. The secret sauce? Deleting stuff.</p>
+            <span class="go">See how I built it <span class="arr">→</span></span><br>
+            <span class="note hand">lowkey proud of this one</span>
+          </div>
+          <div class="thumb" data-tilt><img src="/images/thumb-dearwallet.webp" alt="Dear Wallet summary screen with a donut chart of monthly spending by category" width="872" height="606" loading="lazy"></div>
+        </a>
+        <a class="card t-log" style="--n:2" href="/projects/logrite">
+          <div>
+            <span class="type mono">Website design · Framer · Live client site</span>
+            <h3>LogRite</h3>
+            <p>AI governance for AI tools, aka the rulebook your AI agents can't ghost. I designed its live landing page and product pages in Framer.</p>
+            <span class="go">See the site story <span class="arr">→</span></span><br>
+            <span class="note hand">live & governing AI agents rn ⚡</span>
+          </div>
+          <div class="thumb" data-tilt><img src="/images/thumb-logrite.webp" alt="LogRite homepage hero: The governance layer for everything you run" width="872" height="604" loading="lazy"></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow mono">How my brain works</span>
+          <h2 class="reveal">Four habits that show up <em>in every project</em></h2>
+        </div>
+      </div>
+      <div class="principles">
+        <article class="pr rise">
+          <span class="num mono">Structure</span>
+          <h3>Find the shape first</h3>
+          <span class="from">figure it out later</span>
+          <span class="to hand">break it down, then move</span>
+          <p>I split big, unclear work into parts a team can actually ship, and build the process that keeps them moving.</p>
+        </article>
+        <article class="pr rise">
+          <span class="num mono">Ownership</span>
+          <h3>Own it, end to end</h3>
+          <span class="from">hand it off and hope</span>
+          <span class="to hand">research → design → ship → iterate</span>
+          <p>From research to ship to every round of feedback, I own the work and keep the team in sync.</p>
+        </article>
+        <article class="pr rise">
+          <span class="num mono">Adaptability</span>
+          <h3>Let real users win</h3>
+          <span class="from">defend the first idea</span>
+          <span class="to hand">redesign when reality says so</span>
+          <p>Being right on day one matters less to me than being right by the time it ships.</p>
+        </article>
+        <article class="pr rise">
+          <span class="num mono">Beyond the interface</span>
+          <h3>Zoom out</h3>
+          <span class="from">just the screen</span>
+          <span class="to hand">the user, the business, the planet</span>
+          <p>I design for the context around the product, from a restaurant's leftovers to a site's search ranking.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="writing" style="padding-top: 20px">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow mono">Writing · Medium, UX World & Muzli</span>
+          <h2 class="reveal">I write about <em>how I actually think</em></h2>
+        </div>
+        <span class="hand">grab a coffee ☕</span>
+      </div>
+      <div class="notes">
+        <a class="sn" style="--c: var(--note-1); --r: -2.5deg" href="https://medium.com/@tejithakristem/i-wanted-to-see-if-i-could-build-it-bb93861b9870" target="_blank" rel="noopener">
+          <span class="pin"></span>
+          <h3>I wanted to see if I could build it</h3>
+          <p>How a few paper sketches became a product I use every day.</p>
+          <span class="where"><span class="mono">Medium</span><span class="arr">↗</span></span>
+        </a>
+        <a class="sn" style="--c: var(--note-2); --r: 1.8deg" href="https://medium.com/uxdworld/hooked-by-design-how-ux-fuels-our-digital-addiction-abd91782dad2" target="_blank" rel="noopener">
+          <span class="pin"></span>
+          <h3>Hooked by design</h3>
+          <p>UX fuels our digital addiction. When does design become a trap instead of a tool?</p>
+          <span class="where"><span class="mono pub">★ Published in UX World</span><span class="arr">↗</span></span>
+        </a>
+        <a class="sn" style="--c: var(--note-3); --r: -1.2deg" href="https://medium.com/muzli-design-inspiration/rescuing-food-with-ux-938dee12e273" target="_blank" rel="noopener">
+          <span class="pin"></span>
+          <h3>Rescuing food with UX</h3>
+          <p>How I designed with a conscience (and a craving).</p>
+          <span class="where"><span class="mono pub">★ Published in Muzli</span><span class="arr">↗</span></span>
+        </a>
+        <a class="sn" style="--c: var(--note-4); --r: 2.4deg" href="https://medium.com/@tejithakristem/the-endless-feedback-loop-how-i-broke-free-and-saved-my-sanity-ddf0587967b5" target="_blank" rel="noopener">
+          <span class="pin"></span>
+          <h3>The endless feedback loop</h3>
+          <p>How I broke free and saved my sanity.</p>
+          <span class="where"><span class="mono">Medium</span><span class="arr">↗</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<script>
+  const motionOK = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* rotating "like ..." line */
+  const sw = [...document.querySelectorAll('#swap > span')];
+  let si = 0;
+  if (motionOK && sw.length) setInterval(() => { sw[si].classList.remove('on'); si = (si + 1) % sw.length; sw[si].classList.add('on'); }, 2800);
+
+  /* the little door scanner */
+  const qr = document.getElementById('qr');
+  let seed = 7;
+  const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+  for (let k = 0; k < 121 && qr; k++) {
+    const x = k % 11, y = (k / 11) | 0;
+    const finder = (x < 3 && y < 3) || (x > 7 && y < 3) || (x < 3 && y > 7);
+    const i = document.createElement('i');
+    if (!finder && rnd() > 0.55) i.className = 'o';
+    qr.appendChild(i);
+  }
+  const sc = document.getElementById('scanner');
+  const v1 = document.getElementById('v1');
+  const v2 = document.getElementById('v2');
+  const cnt = document.getElementById('cnt');
+  const people = [['Ajay', 'General Admission'], ['Priya', 'VIP · Table 4'], ['Rohan', 'Youth'], ['Meera', 'General Admission'], ['Dev', 'Family pass']];
+  let pi = 0, n = 79;
+  const cycle = () => {
+    if (!sc || !v1 || !v2 || !cnt) return;
+    sc.classList.add('ok');
+    const [nm, tk] = people[pi++ % people.length];
+    v1.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg> Valid · next!';
+    v2.textContent = nm + ' · ' + tk;
+    n = n >= 150 ? 80 : n + 1;
+    cnt.textContent = String(n);
+    setTimeout(() => { sc.classList.remove('ok'); v1.textContent = 'Scanning…'; v2.textContent = 'hold steady'; }, 1500);
+  };
+  if (motionOK) setInterval(cycle, 2700); else cycle();
+</script>

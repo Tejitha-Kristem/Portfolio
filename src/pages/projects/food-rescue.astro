@@ -1,0 +1,91 @@
+---
+import Base from '../../layouts/Base.astro';
+import NextProject from '../../components/NextProject.astro';
+---
+<Base title="Food Rescue · Tejitha Kristem" description="Food Rescue: a late-night Swiggy concept that turns fresh, unsold restaurant meals into affordable orders." calm>
+  <article style="--accent: var(--marigold)">
+    <header class="cs-head">
+      <div class="wrap">
+        <a class="back" href="/projects"><span class="arr">←</span> All projects</a>
+        <span class="eyebrow mono">Concept design · Solo project</span>
+        <h1 class="cs-title">Food <span class="accent">Rescue</span></h1>
+        <p class="cs-sub">Late-night cravings, but make it sustainable. <span class="hl">Save meals, money and the planet.</span></p>
+        <ul class="chips">
+          <li>Concept · not shipped</li>
+          <li>Mobile · Swiggy feature</li>
+          <li>Research → UI</li>
+        </ul>
+        <dl class="tldr">
+          <div><dt class="mono">What it is</dt><dd>A 9–11 PM tab for fresh, unsold restaurant meals</dd></div>
+          <div><dt class="mono">Who it's for</dt><dd>Restaurant partners and late-night browsers</dd></div>
+          <div><dt class="mono">My role</dt><dd>Solo: research, UX and UI</dd></div>
+          <div><dt class="mono">Big idea</dt><dd>Two needs that can solve each other</dd></div>
+        </dl>
+        <div class="prose" style="margin-top: 28px">
+          <p>Every day, thousands of Swiggy orders' worth of food goes uneaten: cancelled after cooking, or left over at closing time. Meanwhile, thousands of people are scrolling for something affordable at 11 PM. Food Rescue lets those two needs meet.</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="cs-sec">
+      <div class="wrap">
+        <span class="step mono">01 · Research</span>
+        <h2 class="reveal">What restaurants and users <em>told me</em></h2>
+        <div class="prose">
+          <p>I surveyed restaurant partners and users before designing anything. Restaurants were all in: <strong>"If we've already cooked it and it's fresh, why waste it?"</strong> Users loved the feel-good angle as much as the discount: <strong>"Sometimes I browse late but feel guilty about ordering. This would turn it into something positive."</strong></p>
+        </div>
+        <div class="boxes" style="--cols: 2">
+          <div class="box rise"><span class="k mono">38 · Restaurant owner</span><h3>Gaurav</h3><p>Wants to recover value on prepped meals that don't sell.</p></div>
+          <div class="box rise"><span class="k mono">22 · Design student</span><h3>Ayushi</h3><p>Wants affordable late-night food that fits her values.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-sec">
+      <div class="wrap">
+        <span class="step mono">02 · Scope</span>
+        <h2 class="reveal">Scoping <em>the window</em></h2>
+        <div class="prose">
+          <p>The MVP runs 9–11 PM only. Restaurants are winding down, people are hungry and browsing, and the food is still warm, safe and packable. I traded some upside for a simpler, more consistent experience to start with.</p>
+        </div>
+        <div class="quote rise"><p>"Even half a roti wasn't thrown away growing up. If my food can still fill someone's stomach, that's success, not waste."</p><cite>Gaurav, restaurant owner</cite></div>
+        <div class="prose"><p>The real tension wasn't discovery, it was trust. The question in every user's head: <strong>why is this discounted, is it old?</strong></p></div>
+        <figure class="fig mid rise">
+          <div class="frame"><img src="/images/foodrescue-flow.webp" alt="Annotated Food Rescue screens: a home card, a bottom tab, a time-aware banner, impact metrics, filters and rescue cards" width="1100" height="2433" loading="lazy" /></div>
+          <figcaption>From a home-screen card to a dedicated tab, every screen is annotated with why it's there.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="cs-sec">
+      <div class="wrap">
+        <span class="step mono">03 · Trust</span>
+        <h2 class="reveal">Designing <em>for trust</em></h2>
+        <div class="prose">
+          <p>A new "Food Rescue" tab sits in the bottom navigation and reuses Swiggy's existing cards, buttons and ratings, so it feels native. A time-aware banner shows when the window is open, with small transparency metrics beside it.</p>
+          <p>Freshness badges like <strong>"Kitchen Verified"</strong> and <strong>"Same Day Prepared"</strong> sit right on the card, not buried in a details page.</p>
+        </div>
+        <figure class="fig mid rise">
+          <div class="frame"><img src="/images/foodrescue-badges.webp" alt="Rescue food cards with Same day prepared, Kitchen Verified and Fresh, just unsold badges" width="1100" height="1099" loading="lazy" /></div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="cs-sec">
+      <div class="wrap">
+        <span class="step mono">04 · Honest outlook</span>
+        <h2 class="reveal">Weighing it <em>honestly</em></h2>
+        <div class="prose"><p>The opportunity is real, but it only works if the experience stays honest about freshness, timing and what restaurants can reliably deliver.</p></div>
+        <div class="boxes" style="--cols: 2">
+          <div class="box rise"><span class="k mono">Concept projection</span><h3>150+ orders</h3><p>Example in-app metric from the concept.</p></div>
+          <div class="box rise"><span class="k mono">Concept projection</span><h3>850 kg CO₂ reduced</h3><p>Example in-app metric from the concept.</p></div>
+          <div class="box rise"><span class="k mono">What it could do</span><h3>Wins all round</h3><ul><li>Reduce daily food waste</li><li>Recover revenue restaurants would lose</li><li>Affordable late-night food</li></ul></div>
+          <div class="box rise"><span class="k mono">Still unresolved</span><h3>The hard parts</h3><ul><li>Perception: is this stale food?</li><li>Late-night logistics</li><li>Economics at scale</li></ul></div>
+        </div>
+        <p class="disclaimer">Metrics are example numbers from the concept, not real Swiggy results. Food Rescue is a personal concept and isn't affiliated with Swiggy.</p>
+        <a class="ext" href="https://www.behance.net/tejithakristem" target="_blank" rel="noopener">Full case study on Behance ↗</a>
+        <NextProject current="food-rescue" />
+      </div>
+    </section>
+  </article>
+</Base>

@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+import NextProject from '../../components/NextProject.astro';
+---
+<Base title="LogRite · Tejitha Kristem" description="LogRite: a live Framer website for an AI-governance platform for AI tools." calm>
+  <article style="--accent: #E2562A">
+    <header class="cs-head">
+      <div class="wrap">
+        <a class="back" href="/projects"><span class="arr">←</span> All projects</a>
+        <span class="eyebrow mono">Website design · Framer</span>
+        <h1 class="cs-title">Log<span class="accent">Rite</span></h1>
+        <p class="cs-sub">AI governance for AI tools, made <span class="hl">easy to get at first read.</span></p>
+        <ul class="chips">
+          <li class="live">● Live client site</li>
+          <li>B2B website</li>
+          <li>Framer</li>
+        </ul>
+        <dl class="tldr">
+          <div><dt class="mono">What it is</dt><dd>Governance, code logging and observability for AI-driven code</dd></div>
+          <div><dt class="mono">Who it's for</dt><dd>Compliance leads and engineering teams in regulated industries</dd></div>
+          <div><dt class="mono">My role</dt><dd>Website design in Framer, plus post-launch content and SEO</dd></div>
+          <div><dt class="mono">Pages</dt><dd>Homepage, plus pages for each product and audience</dd></div>
+        </dl>
+        <div class="prose" style="margin-top: 28px">
+          <p>LogRite sets the rules your code, AI models and AI agents should follow, and logs everything they do against those rules, so teams can prove it. It serves regulated industries like federal and fintech. I designed the website in Framer: the homepage and dedicated pages for each product and audience.</p>
+        </div>
+        <div class="cs-hero-img rise"><img src="/images/logrite-hero.webp" alt="LogRite homepage hero: The governance layer for everything you run. Your code, your models, your agents." width="1100" height="619" /></div>
+      </div>
+    </header>
+
+    <section class="cs-sec">
+      <div class="wrap">
+        <span class="step mono">01 · Scope</span>
+        <h2 class="reveal">The core <em>design challenge</em></h2>
+        <div class="prose">
+          <p>AI governance across code, models and agents is hard to picture. And a compliance lead reads a page very differently from an engineering lead. <strong>The site couldn't flatten both into generic SaaS speak.</strong></p>
+        </div>
+        <div class="boxes" style="--cols: 2">
+          <div class="box rise"><span class="k mono">Reader 1</span><h3>The compliance buyer</h3><p>Needs to see the rules enforced and the evidence stored, in plain language.</p></div>
+          <div class="box rise"><span class="k mono">Reader 2</span><h3>The engineering lead</h3><p>Needs to see how it plugs into code, API calls and agents without slowing anyone down.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-sec">
+      <div class="wrap">
+        <span class="step mono">02 · Analytics & marketing</span>
+        <h2 class="reveal">Beyond <em>the screens</em></h2>
+        <div class="prose">
+          <p>I stayed on past launch. I wrote LinkedIn content built from the site's own messaging, and worked in Google Analytics and Search Console to fix indexing issues: pages crawled but not indexed, 404s and robots.txt blocks.</p>
+        </div>
+        <div class="boxes">
+          <div class="box rise"><span class="k mono">Content</span><h3>LinkedIn posts</h3><p>Built from the site's messaging, so the story stays consistent.</p></div>
+          <div class="box rise"><span class="k mono">Search</span><h3>Indexing fixes</h3><p>Crawled-not-indexed pages, 404s and robots.txt blocks.</p></div>
+          <div class="box rise"><span class="k mono">Analytics</span><h3>GA + Search Console</h3><p>Watching how people actually find and use the site.</p></div>
+        </div>
+        <NextProject current="logrite" />
+      </div>
+    </section>
+  </article>
+</Base>

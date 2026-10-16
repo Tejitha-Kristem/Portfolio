@@ -1,0 +1,11 @@
+---
+import { nextProject } from '../data/projects';
+const { current } = Astro.props as { current: string };
+const n = nextProject(current);
+---
+<a class="nextp" href={`/projects/${n.slug}`}>
+  <span class="mono">Next project</span>
+  <b>{n.name}{n.accent}</b>
+  <span class="line">{n.line}</span>
+  <span class="arrowbig" aria-hidden="true">→</span>
+</a>

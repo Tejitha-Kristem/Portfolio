@@ -1,0 +1,121 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="About · Tejitha Kristem" description="About Tejitha Kristem, a UI/UX designer in Bangalore who likes messy problems and real users.">
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="about-grid">
+        <div>
+          <span class="eyebrow mono">About me</span>
+          <h1 class="page-title">Hi, I'm Tejitha. <em>I like problems</em> <span class="hand">that show up messy.</span></h1>
+          <div class="story">
+            <p>Most of my work starts with unclear requirements, competing priorities and people who don't agree on what's actually wrong. My job is to find the shape underneath, before I touch a screen.</p>
+            <p>I'm not precious about early ideas. If a real user, a live event or better info proves me wrong, I'd rather redesign than defend something that isn't working. <strong>Being right on day one matters less than being right by the time it ships.</strong></p>
+            <p>I don't think good design needs to show off. I'd rather build the kind of interface people stop noticing because it just works.</p>
+            <p>And I move slower on the parts everyone skips: the edge case, the "what if this fails" screen, the moment something breaks live and someone has to use the product under pressure. <strong>That's usually where the real design problem was hiding all along.</strong></p>
+          </div>
+        </div>
+        <div class="sticker-col">
+          <div class="sticker">
+            <span class="tape"></span>
+            <div class="photo" role="img" aria-label="Photo of Tejitha, coming soon"><span>TK</span></div>
+            <div class="cap">that's me!</div>
+          </div>
+          <div class="sticker-note hand"><svg viewBox="0 0 40 34" aria-hidden="true"><path d="M36 30C32 14 20 8 6 8M13 2 6 8l7 6"/></svg> Bangalore based, <br>remote friendly</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow mono">What I believe</span>
+          <h2 class="reveal">Three rules I <em>design by</em></h2>
+        </div>
+      </div>
+      <div class="principles" style="grid-template-columns: repeat(auto-fit, minmax(230px, 1fr))">
+        <article class="pr rise">
+          <span class="num mono">Rule 1</span>
+          <h3>Ideas are drafts</h3>
+          <span class="from">defend the first idea</span>
+          <span class="to hand">let real users edit it</span>
+          <p>Reality always gets a vote. I just make sure it gets one early.</p>
+        </article>
+        <article class="pr rise">
+          <span class="num mono">Rule 2</span>
+          <h3>Quiet beats flashy</h3>
+          <span class="from">impressive on a slide</span>
+          <span class="to hand">it just works</span>
+          <p>The best compliment a screen can get is that nobody had to think about it.</p>
+        </article>
+        <article class="pr rise">
+          <span class="num mono">Rule 3</span>
+          <h3>Design the bad day</h3>
+          <span class="from">happy path only</span>
+          <span class="to hand">the "what if this fails" screen</span>
+          <p>Edge cases are where trust is won or lost, so they get my full attention.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="ribbon" aria-hidden="true">
+    <div class="track" id="ribbon">
+      {[0, 1, 2].map(() => ['writing', 'AI tinkering', 'sustainability', 'sketchbooks', 'side projects', 'good questions'].map((w) => <><span>{w}</span><i>✿</i></>))}
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow mono">Off the clock</span>
+          <h2 class="reveal">When I'm not <em>in Figma</em></h2>
+        </div>
+        <span class="hand">the fun stuff ✿</span>
+      </div>
+      <div class="offclock">
+        <a class="sn" style="--c: var(--note-1); --r: -2deg" href="https://medium.com/@tejithakristem" target="_blank" rel="noopener">
+          <span class="pin"></span>
+          <span class="emoji" aria-hidden="true">✍️</span>
+          <h3>I write</h3>
+          <p>About how I actually think through the work. Two of my pieces got picked up by UX World and Muzli.</p>
+          <span class="where"><span class="mono">Read on Medium</span><span class="arr">↗</span></span>
+        </a>
+        <a class="sn" style="--c: var(--note-2); --r: 1.6deg" href="/projects/dear-wallet">
+          <span class="pin"></span>
+          <span class="emoji" aria-hidden="true">🛠️</span>
+          <h3>I build with AI</h3>
+          <p>I tinker with AI-assisted tools to take my own ideas end to end, from paper sketch to live URL.</p>
+          <span class="where"><span class="mono">See Dear Wallet</span><span class="arr">→</span></span>
+        </a>
+        <a class="sn" style="--c: var(--note-3); --r: -1.2deg" href="/projects/food-rescue">
+          <span class="pin"></span>
+          <span class="emoji" aria-hidden="true">🌱</span>
+          <h3>I think green</h3>
+          <p>A lot about how sustainability can be designed in, instead of lectured about.</p>
+          <span class="where"><span class="mono">See Food Rescue</span><span class="arr">→</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow mono">Writing · Medium, UX World & Muzli</span>
+          <h2 class="reveal">Fresh <em>off the notebook</em></h2>
+        </div>
+      </div>
+      <ul class="simple">
+        <li class="rise"><a class="ext" style="margin: 0" href="https://medium.com/@tejithakristem/i-wanted-to-see-if-i-could-build-it-bb93861b9870" target="_blank" rel="noopener">I wanted to see if I could build it ↗</a><span> · How a few paper sketches became a product I use every day</span></li>
+        <li class="rise"><a class="ext" style="margin: 0" href="https://medium.com/uxdworld/hooked-by-design-how-ux-fuels-our-digital-addiction-abd91782dad2" target="_blank" rel="noopener">Hooked by design ↗</a><span> · ★ Published in UX World</span></li>
+        <li class="rise"><a class="ext" style="margin: 0" href="https://medium.com/muzli-design-inspiration/rescuing-food-with-ux-938dee12e273" target="_blank" rel="noopener">Rescuing food with UX ↗</a><span> · ★ Published in Muzli</span></li>
+        <li class="rise"><a class="ext" style="margin: 0" href="https://medium.com/@tejithakristem/the-endless-feedback-loop-how-i-broke-free-and-saved-my-sanity-ddf0587967b5" target="_blank" rel="noopener">The endless feedback loop ↗</a><span> · How I broke free and saved my sanity</span></li>
+      </ul>
+    </div>
+  </section>
+</Base>

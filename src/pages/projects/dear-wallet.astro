@@ -1,0 +1,95 @@
+---
+import Base from '../../layouts/Base.astro';
+import NextProject from '../../components/NextProject.astro';
+---
+<Base title="Dear Wallet · Tejitha Kristem" description="Dear Wallet: a household expense tracker I designed, built with Claude Code and shipped on Vercel." calm>
+  <article style="--accent: var(--pen)">
+    <header class="cs-head">
+      <div class="wrap">
+        <a class="back" href="/projects"><span class="arr">←</span> All projects</a>
+        <span class="eyebrow mono">Design + build · Solo, self-initiated</span>
+        <h1 class="cs-title">Dear <span class="accent">Wallet</span></h1>
+        <p class="cs-sub">I wanted to see if I could take it all the way. <span class="hl">Not just design it, build it.</span></p>
+        <ul class="chips">
+          <li class="live">● Live app · self-built</li>
+          <li>Web app</li>
+          <li>Claude Code + Vercel</li>
+        </ul>
+        <dl class="tldr">
+          <div><dt class="mono">What it is</dt><dd>A monthly expense tracker for a shared home</dd></div>
+          <div><dt class="mono">Who it's for</dt><dd>Two people, one household (hi, it's us)</dd></div>
+          <div><dt class="mono">My role</dt><dd>Everything: idea, design, build, ship</dd></div>
+          <div><dt class="mono">Built with</dt><dd>Paper, Claude, Claude Code, GitHub, Vercel</dd></div>
+        </dl>
+        <div class="prose" style="margin-top: 28px">
+          <p>My husband and I wanted a simple way to track our monthly household expenses. Budgeting apps had too little or way too much going on, and none matched how we actually think about money. A Google Form feeding an Excel sheet worked, but we still organized, calculated and analyzed everything by hand. I kept asking: <strong>why does tracking money still feel like work?</strong></p>
+        </div>
+      </div>
+    </header>
+
+    <section class="cs-sec">
+      <div class="wrap">
+        <span class="step mono">01 · Scope</span>
+        <h2 class="reveal">Scoping it <em>down</em></h2>
+        <div class="prose">
+          <p>This wasn't meant to be another finance app with ten dashboards. It was for two people sharing a home who wanted to know what they spent, where it went, and how much of it they could actually control.</p>
+          <p>The most important early call: <strong>split every expense into Recurring and One-time.</strong> That shrank the whole product to one loop: Log → Organize → Understand.</p>
+        </div>
+        <div class="boxes" style="--cols: 2">
+          <div class="box rise"><span class="k mono">Rent · EMI · Bills · Groceries</span><h3>Recurring / Fixed</h3><p>The predictable stuff we track and manage month to month.</p></div>
+          <div class="box rise"><span class="k mono">Eating out · Shopping · Fun</span><h3>Non-recurring / One-time</h3><p>The everyday choices that make spending feel out of control.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-sec">
+      <div class="wrap">
+        <span class="step mono">02 · Exploration</span>
+        <h2 class="reveal">From paper <em>to product</em></h2>
+        <div class="prose">
+          <p>I started with three rough sketches on paper, not a Figma file, and explained the product and screens to Claude straight from those sketches. Then I explored a bunch of visual directions, filling screens with dummy data to see how the information would actually read.</p>
+        </div>
+        <figure class="fig mid rise">
+          <div class="frame"><img src="/images/dearwallet-claude.webp" alt="Claude conversation where the paper sketch and product brief for Dear Wallet were shared" width="1100" height="1227" loading="lazy" /></div>
+          <figcaption>The brief, the sketch and a lot of "quick questions to shape this".</figcaption>
+        </figure>
+        <figure class="fig rise">
+          <div class="frame"><img src="/images/dearwallet-themes.webp" alt="Three explored themes: an Indian ledger book, a cute handwritten journal, and a rupee coin and shagun inspired design" width="1100" height="531" loading="lazy" /></div>
+          <figcaption>Three directions: an Indian ledger book, a cute handwritten journal, and a rupee-coin, shagun-inspired look.</figcaption>
+        </figure>
+        <div class="quote rise"><p>The final direction: a diary theme with a handwritten font and blue-ink personality.</p><cite>A visual system that makes money feel personal, not punishing.</cite></div>
+        <div class="prose">
+          <p>Most of the real design work was subtraction. Sharp corners felt cold, so I softened them. A desktop-style top nav didn't fit the product's feel, so I went back to bottom navigation. I added member management for roommates and PGs, then realized I was solving a problem the product never had, and deleted it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-sec">
+      <div class="wrap">
+        <span class="step mono">03 · Build</span>
+        <h2 class="reveal">Taking it <em>all the way</em></h2>
+        <div class="prose">
+          <p>I'm a UX designer, comfy structuring experiences and interfaces, but I wanted to see if I could take this past the design file. I used Claude Code to build the product, treating design and development as one loop: think, build, see, question, change, repeat.</p>
+          <p>Then I pushed it to GitHub and deployed it on Vercel. What started as three paper sketches now has a real URL.</p>
+        </div>
+        <figure class="fig rise">
+          <div class="frame"><img src="/images/dearwallet-vercel.webp" alt="Vercel dashboard showing the Dear Wallet production deployment as ready" width="1100" height="538" loading="lazy" /></div>
+          <figcaption>Production deployment: Ready ✓</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="cs-sec">
+      <div class="wrap">
+        <span class="step mono">04 · Reflection</span>
+        <h2 class="reveal">What AI did, <em>and didn't, do</em></h2>
+        <div class="prose">
+          <p>Claude could generate interfaces and write code, and it helped me move fast. But it never decided what problem I was solving, what a feature should actually do, or what to cut. <strong>That judgment stayed mine.</strong></p>
+          <p>The value wasn't asking AI to build an app for me. It was closing the loop between thinking, designing and building fast enough to make better decisions along the way.</p>
+        </div>
+        <a class="ext" href="https://dearwallet.vercel.app" target="_blank" rel="noopener">Live at dearwallet.vercel.app ↗</a>
+        <NextProject current="dear-wallet" />
+      </div>
+    </section>
+  </article>
+</Base>

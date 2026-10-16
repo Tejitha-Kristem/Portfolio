@@ -1,0 +1,107 @@
+---
+import Base from '../layouts/Base.astro';
+
+const tools = [
+  { name: 'Figma', use: 'UI design, prototyping', bg: '#1E1E1E', ch: 'F' },
+  { name: 'Framer', use: 'Web design, templates', bg: '#0055FF', ch: 'Fr' },
+  { name: 'WordPress', use: 'Web design, Elementor Pro', bg: '#21759B', ch: 'W' },
+  { name: 'Claude', use: 'Ideation, prototyping', bg: '#D97757', ch: 'C' },
+  { name: 'VS Code', use: 'Building with AI', bg: '#007ACC', ch: '{ }' },
+  { name: 'Notion', use: 'Docs, research', bg: '#191919', ch: 'N' },
+];
+const skills = ['Product design', 'UX research', 'Web design', 'Design systems', 'Prototyping', 'User flows', 'Usability testing', 'Visual design', 'Information architecture'];
+---
+<Base title="Resume · Tejitha Kristem" description="Resume of Tejitha Kristem, UI/UX designer in Bangalore.">
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="rs-head">
+        <div>
+          <span class="eyebrow mono">Resume</span>
+          <h1 class="page-title">Tejitha Kristem</h1>
+          <p class="lede">UI/UX designer who takes messy problems from research to a live product. <strong>Web, mobile and AI-assisted builds.</strong></p>
+          <div class="rs-contacts">
+            <span>📍 Bangalore · open to remote</span>
+            <a href="mailto:tejithakristem@gmail.com">tejithakristem@gmail.com</a>
+            <a href="https://www.linkedin.com/in/tejitha-kristem-67740b162/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.behance.net/tejithakristem" target="_blank" rel="noopener">Behance</a>
+            <a href="https://medium.com/@tejithakristem" target="_blank" rel="noopener">Medium</a>
+          </div>
+        </div>
+        <a class="btn dl-btn no-print" href="/Tejitha-Kristem-Resume.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+          Download PDF
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="rs-block">
+      <span class="eyebrow mono">Experience</span>
+      <h2 class="reveal">Where I've <em>been building</em></h2>
+      <ol class="xp">
+        <li class="rise">
+          <span class="when mono">Feb 2024 – Present · Bangalore</span>
+          <h3>UX Designer <span class="at">@ Deployd.io</span></h3>
+          <ul>
+            <li>Design web and mobile products end to end, from user flows to high-fidelity prototypes in Figma.</li>
+            <li>Partner with product and engineering to turn requirements into intuitive, shippable solutions.</li>
+            <li>Contribute to a shared design system that keeps every product consistent.</li>
+            <li>Own the work from research to review, keeping the team in sync through every round of client feedback.</li>
+          </ul>
+          <div class="client">
+            <span class="mono">Client work via Deployd · Jun 2025 – Jul 2026 · Remote</span>
+            <h4>VCloud Digital</h4>
+            <p>Owned responsive WordPress and Framer websites for local business clients end to end: site architecture, navigation, SEO-focused content, forms and visual assets with AI-assisted workflows. Validated fixes directly with stakeholders and shipped many sites on tight timelines.</p>
+          </div>
+        </li>
+        <li class="rise">
+          <span class="when mono">Aug 2022 – Mar 2023 · Delhi, hybrid</span>
+          <h3>Graphic Design & Comms Intern <span class="at">@ Youth Alliance of India</span></h3>
+          <ul>
+            <li>Designed campaign materials, social media creatives and communication assets for audience engagement.</li>
+            <li>Worked with cross-functional teams to plan content and deliver clear visual communication across channels.</li>
+          </ul>
+        </li>
+        <li class="rise">
+          <span class="when mono">Jan 2019 – Mar 2020 · Hyderabad</span>
+          <h3>Frontend Developer <span class="at">@ Ojas Innovative Technology</span></h3>
+          <ul>
+            <li>Built responsive interfaces with Angular, HTML, CSS, Bootstrap and TypeScript.</li>
+            <li>Joined usability discussions and user research, working across design and development to improve the UX.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section class="rs-block">
+      <span class="eyebrow mono">Toolkit</span>
+      <h2 class="reveal">Tools <em>powering my work</em></h2>
+      <div class="tools">
+        {tools.map((t) => (
+          <div class="tool rise">
+            <span class="ic" style={`background:${t.bg}`} aria-hidden="true">{t.ch}</span>
+            <div><b>{t.name}</b><span>{t.use}</span></div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="rs-block">
+      <span class="eyebrow mono">Skills</span>
+      <h2 class="reveal">What I'm <em>good at</em></h2>
+      <ul class="skills">{skills.map((s) => <li>{s}</li>)}</ul>
+    </section>
+
+    <section class="rs-block">
+      <span class="eyebrow mono">Learning</span>
+      <h2 class="reveal">Certifications <em>& education</em></h2>
+      <ul class="simple">
+        <li><b>Advanced UI/UX Training for Web and Mobile</b><span>BridgeUX Design · Feb 2023</span></li>
+        <li><b>Framer Website Building</b><span>Udemy · 2025</span></li>
+        <li><b>Master of Computer Applications</b><span>Madanapalle Institute of Technology and Science · 2017 – 2020</span></li>
+      </ul>
+    </section>
+  </div>
+  <div style="height: clamp(50px, 7vw, 90px)"></div>
+</Base>
