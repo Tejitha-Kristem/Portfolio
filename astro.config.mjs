@@ -4,6 +4,6 @@ import { defineConfig } from 'astro/config';
 const preview = process.env.PREVIEW === '1';
 
 export default defineConfig({
-  build: { inlineStylesheets: 'always', format: preview ? 'file' : 'directory' },
+  build: { inlineStylesheets: 'always', format: preview ? 'file' : 'directory', ...(preview ? { assets: 'assets' } : {}) },
   ...(preview ? { outDir: '../preview-dist' } : {}),
 });
