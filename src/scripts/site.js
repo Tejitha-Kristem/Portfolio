@@ -25,7 +25,17 @@ themeBtn?.addEventListener('click', () => {
   root.dataset.theme = isDark() ? 'light' : 'dark';
   try { localStorage.setItem('tk-theme', root.dataset.theme); } catch (e) {}
   labelTheme();
-  toast(isDark() ? 'Low-power mode on. Dark pixels sip less energy on OLED 🌙' : 'Lights back on ☀️');
+  toast(isDark() ? 'Dark mode on 🌙' : 'Light mode on ☀️');
+});
+
+/* carry an explicit theme choice to the next page (backup for when storage is blocked) */
+document.addEventListener('click', (e) => {
+  const a = e.target.closest?.('a[href]');
+  const theme = root.dataset.theme;
+  if (!a || !theme) return;
+  const href = a.getAttribute('href');
+  if (/^(https?:|mailto:|tel:|#)/.test(href) || a.hasAttribute('download') || /\.(pdf|mp4|webp)$/.test(href)) return;
+  a.setAttribute('href', href.split('#')[0] + '#theme-' + theme);
 });
 
 /* copy email */
