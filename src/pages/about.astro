@@ -1,19 +1,22 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="About · Tejitha Kristem" description="About Tejitha Kristem, a UI/UX designer in Bangalore who likes messy problems and real users.">
+<Base title="About · Tejitha Kristem" description="About Tejitha Kristem, a UI/UX designer in Bangalore who designs for real users and real life.">
   <div class="page-hero">
     <div class="wrap">
       <div class="about-grid">
         <div>
           <span class="eyebrow mono">About me</span>
-          <h1 class="page-title">Hi, I'm Tejitha. <em>I like problems</em> <span class="hand">that show up messy.</span></h1>
+          <h1 class="page-title">Hi, I'm Tejitha. <em>I like problems</em> <span class="hand">that don't come pre-sorted.</span></h1>
           <div class="story">
             <p>Most of my work starts with unclear requirements, competing priorities and people who don't agree on what's actually wrong. My job is to find the shape underneath, before I touch a screen.</p>
+            <div class="more-body" id="more-story" hidden>
             <p>Fun fact: I started out as a <strong>developer</strong>, then wandered off into art and illustration. Tech pulled me back, though. I got curious about how we actually engage with our devices, and what makes an experience feel good or frustrating. That curiosity is what turned me into a UX designer.</p>
             <p>I'm not precious about early ideas. If a real user, a live event or better info proves me wrong, I'd rather redesign than defend something that isn't working. <strong>Being right on day one matters less than being right by the time it ships.</strong></p>
             <p>I don't think good design needs to show off. I'd rather build the kind of interface people stop noticing because it just works.</p>
             <p>And I move slower on the parts everyone skips: the edge case, the "what if this fails" screen, the moment something breaks live and someone has to use the product under pressure. <strong>That's usually where the real design problem was hiding all along.</strong></p>
+            </div>
+            <button class="readmore linkish" type="button" aria-expanded="false" aria-controls="more-story" data-more="Read more about me" data-less="Show less"><span class="lbl">Read more about me</span> <span class="arr" aria-hidden="true">↓</span></button>
           </div>
         </div>
         <div class="sticker-col">
@@ -67,6 +70,16 @@ import Base from '../layouts/Base.astro';
       {[0, 1, 2].map(() => ['yoga', 'watercolors', 'digital sketching', 'handmade crafts', 'writing', 'AI tinkering', 'sustainability'].map((w) => <><span>{w}</span><i>✿</i></>))}
     </div>
   </div>
+
+  <section style="padding-bottom: 0">
+    <div class="wrap">
+      <a class="more-work rise" href="https://www.behance.net/tejithakristem" target="_blank" rel="noopener">
+        <span class="mono">Psst, there's more</span>
+        <b>This site shows my favourites. Behance has the rest of my projects.</b>
+        <span class="go">Browse my Behance <span class="arr" aria-hidden="true">↗</span></span>
+      </a>
+    </div>
+  </section>
 
   <section>
     <div class="wrap">

@@ -28,14 +28,40 @@ themeBtn?.addEventListener('click', () => {
   toast(isDark() ? 'Dark mode on 🌙' : 'Light mode on ☀️');
 });
 
-/* carry an explicit theme choice to the next page (backup for when storage is blocked) */
+/* carry theme + style settings to the next page (backup for when storage is blocked) */
 document.addEventListener('click', (e) => {
   const a = e.target.closest?.('a[href]');
-  const theme = root.dataset.theme;
-  if (!a || !theme) return;
+  if (!a) return;
   const href = a.getAttribute('href');
   if (/^(https?:|mailto:|tel:|#)/.test(href) || a.hasAttribute('download') || /\.(pdf|mp4|webp)$/.test(href)) return;
-  a.setAttribute('href', href.split('#')[0] + '#theme-' + theme);
+  const d = root.dataset;
+  a.setAttribute('href', `${href.split('#')[0]}#s-${d.theme || 'light'}-${d.bg || 'grain'}-${d.ann || 'squiggle'}`);
+});
+
+/* read more / show less */
+document.querySelectorAll('.readmore').forEach((btn) => {
+  const panel = document.getElementById(btn.getAttribute('aria-controls'));
+  const lbl = btn.querySelector('.lbl');
+  btn.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') !== 'true';
+    btn.setAttribute('aria-expanded', String(open));
+    panel.hidden = !open;
+    if (lbl) lbl.textContent = open ? btn.dataset.less : btn.dataset.more;
+    if (open) panel.querySelectorAll('.reveal, .rise, .pr, .hl').forEach((el) => el.classList.add('in'));
+    else btn.scrollIntoView({ block: 'center', behavior: motionOK ? 'smooth' : 'auto' });
+  });
+});
+
+/* review-only style switcher */
+document.querySelectorAll('#opts .row').forEach((row) => {
+  const key = row.dataset.key;
+  const sync = () => row.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.v === root.dataset[key])));
+  row.querySelectorAll('button').forEach((b) => b.addEventListener('click', () => {
+    root.dataset[key] = b.dataset.v;
+    try { localStorage.setItem('tk-' + key, b.dataset.v); } catch (e) {}
+    sync();
+  }));
+  sync();
 });
 
 /* copy email */
