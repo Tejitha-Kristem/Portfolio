@@ -13,7 +13,7 @@
 
 /* ---------- generic page hero ---------- */
 .page-hero { padding-block: clamp(30px, 6vw, 72px) clamp(24px, 4vw, 48px); }
-.page-title { font-family: var(--f-display); font-size: clamp(2.7rem, 7.4vw, 6rem); line-height: .98; letter-spacing: -.035em; font-weight: 560; margin: 18px 0 0; text-wrap: balance; font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 144; }
+.page-title { font-family: var(--f-display); font-size: clamp(2.5rem, 5.6vw, 4.7rem); line-height: .98; letter-spacing: -.035em; font-weight: 560; margin: 18px 0 0; text-wrap: balance; font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 144; }
 .page-title em { font-weight: 380; color: var(--ink-soft); }
 .page-title .hand { font-size: 1.04em; display: inline-block; transform: rotate(-3deg); }
 .lede { max-width: 38rem; font-size: var(--s-lead); color: var(--ink-soft); margin: 22px 0 0; }
@@ -53,7 +53,7 @@
 .back .arr { transition: transform .3s; }
 .back:hover .arr { transform: translateX(-4px); }
 .cs-head .eyebrow { margin-top: 26px; }
-.cs-title { font-family: var(--f-display); font-size: clamp(3.2rem, 9vw, 7.4rem); line-height: .92; letter-spacing: -.045em; font-weight: 640; margin: 14px 0 0; font-variation-settings: "SOFT" 60, "WONK" 1, "opsz" 144; }
+.cs-title { font-family: var(--f-display); font-size: clamp(3rem, 6.8vw, 5.6rem); line-height: .92; letter-spacing: -.045em; font-weight: 640; margin: 14px 0 0; font-variation-settings: "SOFT" 60, "WONK" 1, "opsz" 144; }
 .cs-title .accent { color: var(--accent, var(--marigold)); }
 .cs-sub { font-family: var(--f-display); font-size: clamp(1.35rem, 2.8vw, 2.1rem); line-height: 1.2; font-weight: 400; margin: 18px 0 0; max-width: 40rem; text-wrap: balance; font-variation-settings: "SOFT" 100, "opsz" 48; }
 .cs-head .chips { margin-top: 22px; }
@@ -275,14 +275,6 @@
 /* keep project thumbnails one consistent shape */
 .card .thumb img, .prow .pthumb img, .peek img { aspect-ratio: 16 / 9; object-fit: cover; object-position: top center; }
 
-/* ---------- annotation style options (html[data-ann]) for the habit/rule cards ---------- */
-:root[data-ann="circle"] .pr .from, :root[data-ann="squiggle"] .pr .from { display: none; }
-:root[data-ann="circle"] .pr .to { display: inline-block; margin-top: 12px; padding: .12em .65em .2em; border: 2px solid var(--pen); border-radius: 50% / 55%; transform: rotate(-2.5deg); }
-:root[data-ann="squiggle"] .pr .to { margin-top: 12px; text-decoration: underline wavy var(--marigold) 2px; text-underline-offset: 7px; text-decoration-skip-ink: none; }
-:root[data-ann="arrow"] .pr .from::after { display: none; }
-:root[data-ann="arrow"] .pr .from { opacity: .75; }
-:root[data-ann="arrow"] .pr .to::before { content: "↳ "; color: var(--marigold); }
-:root[data-ann="circle"].js.motion .pr .to, :root[data-ann="squiggle"].js.motion .pr .to { transition-delay: .2s; }
 
 /* ---------- read more ---------- */
 .readmore-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; margin-top: 40px; }
@@ -306,16 +298,6 @@
 .more-work b { font-family: var(--f-display); font-size: clamp(1.4rem, 2.8vw, 2rem); line-height: 1.2; font-weight: 520; font-variation-settings: "SOFT" 100, "opsz" 48; max-width: 34ch; }
 .more-work .go { font-weight: 600; color: var(--pen); }
 
-/* preview-only options panel */
-.opts { position: fixed; right: max(14px, env(safe-area-inset-right, 0px)); bottom: calc(14px + env(safe-area-inset-bottom, 0px)); z-index: 85; background: var(--card); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 18px 40px -20px rgba(21,41,28,.5); font-size: .85rem; max-width: calc(100vw - 28px); }
-.opts summary { cursor: pointer; padding: 10px 16px; font-weight: 600; list-style: none; }
-.opts summary::-webkit-details-marker { display: none; }
-.opts .body { padding: 0 16px 14px; display: grid; gap: 10px; }
-.opts .row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
-.opts .row > span { width: 100%; color: var(--ink-soft); }
-.opts button { font: 500 .8rem var(--f-body); padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); cursor: pointer; }
-.opts button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-@media print { .opts { display: none; } }
 
 /* keep the "Hi, I'm Tejitha" logo on one line on small phones */
 .logo { white-space: nowrap; }

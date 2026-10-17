@@ -15,11 +15,9 @@ const nav = [
   { href: '/resume', label: 'Resume', match: (p: string) => p === '/resume' },
 ];
 const email = 'tejithakristem@gmail.com';
-// Review-only switcher for background / annotation styles (never in the real build).
-const showOptions = process.env.PREVIEW === '1';
 ---
 <!doctype html>
-<html lang="en" data-theme="light" data-bg="grain" data-ann="squiggle">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -35,15 +33,11 @@ const showOptions = process.env.PREVIEW === '1';
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500..700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=JetBrains+Mono:wght@400;600&family=Onest:wght@400..700&display=swap" />
     <script is:inline>
       (function () {
-        // settings travel as #s-<theme>-<bg>-<ann> between pages, with storage as the usual path
-        var d = document.documentElement.dataset;
-        var m = location.hash.match(/^#s-(dark|light)-([a-z]+)-([a-z]+)$/);
-        var keys = ['theme', 'bg', 'ann'];
-        keys.forEach(function (k, i) {
-          var v = m ? m[i + 1] : null;
-          try { if (v) localStorage.setItem('tk-' + k, v); else v = localStorage.getItem('tk-' + k); } catch (e) {}
-          if (v) d[k] = v;
-        });
+        // the theme travels as #theme-<mode> between pages, with storage as the usual path
+        var m = location.hash.match(/^#theme-(dark|light)$/);
+        var t = m ? m[1] : null;
+        try { if (t) localStorage.setItem('tk-theme', t); else t = localStorage.getItem('tk-theme'); } catch (e) {}
+        if (t) document.documentElement.dataset.theme = t;
         if (m) try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
       })();
     </script>
@@ -96,15 +90,6 @@ const showOptions = process.env.PREVIEW === '1';
       </div>
     </footer>
     <div class="toast" id="toast" role="status"></div>
-    {showOptions && (
-      <details class="opts" id="opts">
-        <summary>🎛 Try styles</summary>
-        <div class="body">
-          <div class="row" data-key="bg"><span>Background</span><button type="button" data-v="grain">Paper grain</button><button type="button" data-v="dots">Dots</button><button type="button" data-v="ruled">Notebook lines</button><button type="button" data-v="plain">Plain</button><button type="button" data-v="grid">Grid (old)</button></div>
-          <div class="row" data-key="ann"><span>Note style (habits & rules)</span><button type="button" data-v="squiggle">Squiggle</button><button type="button" data-v="circle">Circled</button><button type="button" data-v="arrow">Arrow</button><button type="button" data-v="strike">Strike (old)</button></div>
-        </div>
-      </details>
-    )}
     <script>
       import '../scripts/site.js';
     </script>

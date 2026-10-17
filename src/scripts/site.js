@@ -28,14 +28,13 @@ themeBtn?.addEventListener('click', () => {
   toast(isDark() ? 'Dark mode on 🌙' : 'Light mode on ☀️');
 });
 
-/* carry theme + style settings to the next page (backup for when storage is blocked) */
+/* carry the theme to the next page (backup for when storage is blocked) */
 document.addEventListener('click', (e) => {
   const a = e.target.closest?.('a[href]');
   if (!a) return;
   const href = a.getAttribute('href');
   if (/^(https?:|mailto:|tel:|#)/.test(href) || a.hasAttribute('download') || /\.(pdf|mp4|webp)$/.test(href)) return;
-  const d = root.dataset;
-  a.setAttribute('href', `${href.split('#')[0]}#s-${d.theme || 'light'}-${d.bg || 'grain'}-${d.ann || 'squiggle'}`);
+  a.setAttribute('href', `${href.split('#')[0]}#theme-${root.dataset.theme || 'light'}`);
 });
 
 /* read more / show less */
@@ -52,17 +51,6 @@ document.querySelectorAll('.readmore').forEach((btn) => {
   });
 });
 
-/* review-only style switcher */
-document.querySelectorAll('#opts .row').forEach((row) => {
-  const key = row.dataset.key;
-  const sync = () => row.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.v === root.dataset[key])));
-  row.querySelectorAll('button').forEach((b) => b.addEventListener('click', () => {
-    root.dataset[key] = b.dataset.v;
-    try { localStorage.setItem('tk-' + key, b.dataset.v); } catch (e) {}
-    sync();
-  }));
-  sync();
-});
 
 /* copy email */
 document.querySelectorAll('[data-copy]').forEach((btn) => {
