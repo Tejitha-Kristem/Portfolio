@@ -173,6 +173,32 @@ document.querySelectorAll('.compare').forEach((c) => {
   set();
 });
 
+/* first time a slider shows up, sweep left to reveal the whole "after" screen, then settle */
+if (motionOK && 'IntersectionObserver' in window) {
+  const peek = new IntersectionObserver((entries) => entries.forEach((e) => {
+    if (!e.isIntersecting) return;
+    peek.unobserve(e.target);
+    const c = e.target, input = c.querySelector('input');
+    let touched = false;
+    input.addEventListener('pointerdown', () => { touched = true; }, { once: true });
+    const keys = [[0, 50], [900, 6], [1700, 6], [2500, 50]];
+    const t0 = performance.now();
+    const ease = (k) => 0.5 - Math.cos(Math.PI * k) / 2;
+    const step = (now) => {
+      if (touched) return;
+      const t = now - t0;
+      let i = 0; while (i < keys.length - 2 && t > keys[i + 1][0]) i++;
+      const [ta, va] = keys[i], [tb, vb] = keys[i + 1];
+      const k = Math.min(1, Math.max(0, (t - ta) / (tb - ta)));
+      input.value = String(va + (vb - va) * ease(k));
+      c.style.setProperty('--x', input.value + '%');
+      if (t < keys[keys.length - 1][0]) requestAnimationFrame(step);
+    };
+    setTimeout(() => requestAnimationFrame(step), 400);
+  }), { threshold: 0.6 });
+  document.querySelectorAll('.compare').forEach((c) => peek.observe(c));
+}
+
 /* walkthrough videos: play muted while on screen, pause when away */
 const vids = document.querySelectorAll('video[data-autoplay]');
 /* walkthroughs play at half speed by default (viewers can still change it) */
