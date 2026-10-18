@@ -325,3 +325,21 @@
 
 /* persona quote inside each merged role block */
 .persona-quote { margin: 14px 0 0; padding-left: 14px; border-left: 3px solid var(--accent, var(--marigold)); font-family: var(--f-display); font-style: italic; font-size: 1.12rem; line-height: 1.4; color: var(--ink); max-width: 30rem; }
+
+/* ---------- case studies: one even, centred column ---------- */
+article > .cs-head > .wrap, article > .cs-sec > .wrap, article > .full-story > .cs-sec > .wrap, article > .wrap {
+  max-width: calc(880px + 2 * max(20px, env(safe-area-inset-left, 0px)));
+}
+@media (min-width: 960px) {
+  article > .cs-head > .wrap, article > .cs-sec > .wrap, article > .full-story > .cs-sec > .wrap, article > .wrap {
+    padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px));
+  }
+}
+article .prose, article .quote, article .fig.mid, article .twists, article .cs-sub, article .cs-sec h2 { max-width: none; }
+article .compare { max-width: none; }
+article .compare.tall { max-width: 22rem; margin-inline: auto; }
+article .fig.narrow { margin-inline: auto; }
+article .compare-note { display: block; text-align: center; }
+.compare-lead { margin: 34px 0 0; color: var(--ink-soft); font-size: 1.06rem; }
+
+article .principles { margin-top: 28px; }

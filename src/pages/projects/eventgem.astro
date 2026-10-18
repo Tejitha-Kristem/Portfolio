@@ -103,7 +103,7 @@ import NextProject from '../../components/NextProject.astro';
         <span class="step mono">03 · Process</span>
         <h2 class="reveal">How we got there</h2>
         <div class="prose"><p>Each step handed something to the next. Design and feedback kept looping, even after launch.</p></div>
-        <div class="boxes" style="--cols: 4">
+        <div class="boxes" style="--cols: 2">
           <div class="box rise"><span class="k mono">Step 1</span><h3>Stakeholder interviews</h3><p>What the founders want, and how it should feel.</p></div>
           <div class="box rise"><span class="k mono">Step 2</span><h3>Competitor research</h3><p>Where existing platforms fall short.</p></div>
           <div class="box rise"><span class="k mono">Step 3</span><h3>Personas</h3><p>One for each role.</p></div>
@@ -188,10 +188,16 @@ import NextProject from '../../components/NextProject.astro';
             <span class="knob" aria-hidden="true">⇆</span>
           </div>
           <span class="compare-note hand">drag me ⇆</span>
-          <figure class="fig rise">
-            <div class="frame"><img src="/images/eventgem-create-event.webp" alt="EventGem create event flow with a step list on the left and the Event Details form" width="1440" height="960" loading="lazy" /></div>
-            <figcaption>Hit "Create Event" and the steps are spelled out in plain words, from details to preview.</figcaption>
-          </figure>
+          <p class="compare-lead">And the create-event flow got the same treatment:</p>
+          <div class="compare rise" style="--ar: 16 / 9.4">
+            <img src="/images/eventgem-create-before.webp" alt="Before: Eventful create event screen with every field, tag and toggle on one dense form" width="1440" height="810" loading="lazy" />
+            <img class="after" src="/images/eventgem-create-event.webp" alt="After: EventGem create event flow with plain-word steps on the left and one section at a time" width="1440" height="960" loading="lazy" />
+            <span class="tag b">Before</span><span class="tag a">After</span>
+            <span class="divider"></span>
+            <input type="range" min="0" max="100" value="50" aria-label="Drag to compare the old and new create event flow" />
+            <span class="knob" aria-hidden="true">⇆</span>
+          </div>
+          <p class="disclaimer">Everything on one dense form became plain-word steps, one section at a time.</p>
         </div>
 
         <div class="moment rise">
