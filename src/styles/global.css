@@ -63,7 +63,7 @@ body {
   font-family: var(--f-body);
   font-size: 1.02rem;
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
   transition: background-color .5s, color .5s;
 }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--paper); }
@@ -98,6 +98,14 @@ a { color: inherit; }
 .top {
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
   padding-block: 14px;
+  transition: background-color .35s, box-shadow .35s, padding .35s, backdrop-filter .35s;
+}
+/* once you scroll, the header floats on a soft frosted strip */
+.top.scrolled {
+  padding-block: 8px;
+  background: color-mix(in srgb, var(--paper) 78%, transparent);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2); backdrop-filter: blur(12px) saturate(1.2);
+  box-shadow: 0 1px 0 var(--line), 0 10px 30px -22px rgba(21,41,28,.45);
 }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .logo { font-family: var(--f-hand); font-size: 1.9rem; font-weight: 700; text-decoration: none; color: var(--ink); display: inline-flex; align-items: center; gap: 6px; }

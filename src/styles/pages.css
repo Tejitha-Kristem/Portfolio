@@ -343,3 +343,20 @@ article .compare-note { display: block; text-align: center; }
 .compare-lead { margin: 34px 0 0; color: var(--ink-soft); font-size: 1.06rem; }
 
 article .principles { margin-top: 28px; }
+
+/* back to top */
+.to-top { position: fixed; right: max(18px, env(safe-area-inset-right, 0px)); bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 60;
+  width: 50px; height: 50px; border-radius: 50%; border: 1.5px solid var(--ink); background: var(--hl); color: #15291C; display: grid; place-items: center; cursor: pointer;
+  box-shadow: 0 12px 26px -14px rgba(21,41,28,.55);
+  opacity: 0; visibility: hidden; transform: translateY(16px) scale(.9);
+  transition: opacity .3s, transform .4s cubic-bezier(.3,1.6,.5,1), visibility .3s; }
+.to-top.show { opacity: 1; visibility: visible; transform: none; }
+.to-top:hover { transform: translateY(-4px) rotate(-6deg); }
+.to-top svg { width: 22px; height: 22px; }
+@media (max-width: 560px) { .to-top { width: 44px; height: 44px; } }
+@media print { .to-top { display: none; } }
+
+/* theme toggle shows where you can go: sun in dark mode, moon in light mode */
+.theme-btn .ic-sun { display: none; }
+:root[data-theme="dark"] .theme-btn .ic-sun { display: block; }
+:root[data-theme="dark"] .theme-btn .ic-moon { display: none; }

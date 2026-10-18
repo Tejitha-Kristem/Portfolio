@@ -34,7 +34,7 @@ document.addEventListener('click', (e) => {
   if (!a) return;
   const href = a.getAttribute('href');
   if (/^(https?:|mailto:|tel:|#)/.test(href) || a.hasAttribute('download') || /\.(pdf|mp4|webp)$/.test(href)) return;
-  a.setAttribute('href', `${href.split('#')[0]}#theme-${root.dataset.theme || 'light'}`);
+  a.setAttribute('href', `${href.split('#')[0]}#theme-${root.dataset.theme || 'dark'}`);
 });
 
 /* read more / show less */
@@ -135,6 +135,12 @@ if (stem && leaves) {
     marks.push([t, el]);
   });
 }
+const topBar = document.querySelector('.top');
+const toTop = document.getElementById('toTop');
+toTop?.addEventListener('click', () => {
+  scrollTo({ top: 0, behavior: motionOK ? 'smooth' : 'auto' });
+  document.querySelector('.logo')?.focus({ preventScroll: true });
+});
 let ticking = false;
 const onScroll = () => {
   const max = document.documentElement.scrollHeight - innerHeight;
@@ -147,6 +153,8 @@ const onScroll = () => {
     const w = ribbon.scrollWidth / 3;
     ribbon.style.transform = `translateX(${-((scrollY * 0.35) % w)}px)`;
   }
+  topBar?.classList.toggle('scrolled', scrollY > 24);
+  toTop?.classList.toggle('show', scrollY > innerHeight * 0.9);
   ticking = false;
 };
 addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
