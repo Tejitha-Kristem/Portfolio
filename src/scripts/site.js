@@ -175,6 +175,12 @@ document.querySelectorAll('.compare').forEach((c) => {
 
 /* walkthrough videos: play muted while on screen, pause when away */
 const vids = document.querySelectorAll('video[data-autoplay]');
+/* walkthroughs play at half speed by default (viewers can still change it) */
+vids.forEach((v) => {
+  const slow = () => { v.defaultPlaybackRate = 0.5; v.playbackRate = 0.5; };
+  slow();
+  v.addEventListener('loadedmetadata', slow, { once: true });
+});
 if (vids.length && motionOK && 'IntersectionObserver' in window) {
   const vo = new IntersectionObserver((entries) => entries.forEach((e) => {
     const v = e.target;

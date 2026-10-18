@@ -316,7 +316,7 @@ h2 em { font-weight: 380; color: var(--ink-soft); }
 
 /* ---------- footer ---------- */
 .end { padding-block: clamp(70px, 10vw, 120px) 40px; border-top: 1.5px dashed var(--line); }
-.end h2 { font-size: clamp(2.6rem, 7.4vw, 6.2rem); line-height: .98; }
+.end h2 { font-size: clamp(2rem, 4.6vw, 3.8rem); line-height: 1.04; max-width: 22ch; }
 .end h2 .hand { font-size: 1.05em; display: inline-block; transform: rotate(-3deg); }
 .contact-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 36px; }
 .email { color: var(--ink); text-decoration: none; font-family: var(--f-mono); font-size: clamp(.95rem, 2vw, 1.15rem); background: var(--card); border: 1px solid var(--line); padding: 13px 18px; border-radius: 999px; user-select: all; word-break: break-all; }
