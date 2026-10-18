@@ -23,7 +23,8 @@ const labelTheme = () => themeBtn?.setAttribute('aria-label', isDark() ? 'Switch
 labelTheme();
 themeBtn?.addEventListener('click', () => {
   root.dataset.theme = isDark() ? 'light' : 'dark';
-  try { localStorage.setItem('tk-theme', root.dataset.theme); } catch (e) {}
+  root.dataset.chosen = '1';
+  try { localStorage.setItem('tk-mode', root.dataset.theme); } catch (e) {}
   labelTheme();
   toast(isDark() ? 'Dark mode on 🌙' : 'Light mode on ☀️');
 });
@@ -31,7 +32,7 @@ themeBtn?.addEventListener('click', () => {
 /* carry the theme to the next page (backup for when storage is blocked) */
 document.addEventListener('click', (e) => {
   const a = e.target.closest?.('a[href]');
-  if (!a) return;
+  if (!a || !root.dataset.chosen) return;
   const href = a.getAttribute('href');
   if (/^(https?:|mailto:|tel:|#)/.test(href) || a.hasAttribute('download') || /\.(pdf|mp4|webp)$/.test(href)) return;
   a.setAttribute('href', `${href.split('#')[0]}#theme-${root.dataset.theme || 'dark'}`);

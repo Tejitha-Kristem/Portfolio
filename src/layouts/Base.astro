@@ -34,10 +34,11 @@ const email = 'tejithakristem@gmail.com';
     <script is:inline>
       (function () {
         // the theme travels as #theme-<mode> between pages, with storage as the usual path
+        // only a mode the visitor picked with the toggle is remembered (dark is the default)
         var m = location.hash.match(/^#theme-(dark|light)$/);
         var t = m ? m[1] : null;
-        try { if (t) localStorage.setItem('tk-theme', t); else t = localStorage.getItem('tk-theme'); } catch (e) {}
-        if (t) document.documentElement.dataset.theme = t;
+        try { if (t) localStorage.setItem('tk-mode', t); else t = localStorage.getItem('tk-mode'); localStorage.removeItem('tk-theme'); } catch (e) {}
+        if (t) { document.documentElement.dataset.theme = t; document.documentElement.dataset.chosen = '1'; }
         if (m) try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
       })();
     </script>
